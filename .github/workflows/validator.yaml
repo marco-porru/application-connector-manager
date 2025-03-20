@@ -78,6 +78,7 @@ jobs:
         working-directory: ./components/central-application-connectivity-validator
         run: |
           set -o pipefail
+          echo 'TESTING'
           make test | tee test.log
       - name: Archive test results
         if: success() || failure()
