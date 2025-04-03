@@ -1,6 +1,6 @@
 module github.com/kyma-project/kyma/components/central-application-gateway
 
-go 1.23.1
+go 1.24.1
 
 require (
 	github.com/gorilla/mux v1.8.1
@@ -60,8 +60,8 @@ require (
 )
 
 replace (
-	golang.org/x/crypto => golang.org/x/crypto v0.31.0
 	golang.org/x/net => golang.org/x/net v0.37.0
+	golang.org/x/oauth2 => golang.org/x/oauth2 v0.27.0
 	golang.org/x/sys => golang.org/x/sys v0.31.0
 	golang.org/x/term => golang.org/x/term v0.30.0
 	golang.org/x/text => golang.org/x/text v0.23.0

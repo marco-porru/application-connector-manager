@@ -44,7 +44,7 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
       - name: Detect files
         id: detect-files
-        uses: tj-actions/changed-files@d6babd6899969df1a11d14c368283ea4436bca78
+        uses: step-security/changed-files@52f756978519f427e38a119d8c4f0c8f549d1402
         with:
           files_yaml: |
             validator:
@@ -79,7 +79,6 @@ jobs:
         working-directory: ./components/central-application-connectivity-validator
         run: |
           set -o pipefail
-          echo 'TESTING'
           make test | tee test.log
       - name: Archive test results
         if: success() || failure()
@@ -103,14 +102,14 @@ jobs:
   integration-tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: azure/setup-helm@v4.1.0
+      - uses: azure/setup-helm@v4.3.0
         id: install
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Set up go environment
         uses: actions/setup-go@v4
         with:
-          go-version: 1.23.1
+          go-version: 1.24.2
       - name: Install k3d
         env:
           K3D_URL: https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh

@@ -1,6 +1,6 @@
 module github.com/kyma-project/kyma/components/compass-runtime-agent
 
-go 1.23.1
+go 1.24.1
 
 require (
 	github.com/google/uuid v1.6.0
@@ -75,7 +75,6 @@ require (
 	golang.org/x/text v0.23.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.2.0 // indirect
-	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
@@ -93,9 +92,10 @@ require (
 replace (
 	github.com/containerd/containerd => github.com/containerd/containerd v1.4.11
 	github.com/docker/distribution => github.com/docker/distribution v0.0.0-20191216044856-a8371794149d
-	github.com/docker/docker => github.com/docker/docker v20.10.8+incompatible
+	github.com/docker/docker => github.com/docker/docker v20.10.27+incompatible
 	golang.org/x/crypto => golang.org/x/crypto v0.31.0
 	golang.org/x/net => golang.org/x/net v0.37.0
+	golang.org/x/oauth2 => golang.org/x/oauth2 v0.27.0
 	golang.org/x/sys => golang.org/x/sys v0.31.0
 	golang.org/x/term => golang.org/x/term v0.30.0
 	golang.org/x/text => golang.org/x/text v0.23.0
